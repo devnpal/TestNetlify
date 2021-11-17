@@ -1,10 +1,16 @@
-<h1>Hey Dev ...!!!</h1>
+<h1>Hey Guys ...!!!</h1>
 
-<p>What is my wife Name</p>
+<p>Guess my wife Name...:)</p>
 
-<button (click)=mywife()>Click Me to Find out</button>
+<button (click)=mywife()>Click to Find out</button>
 
 
-<h1>{{wife}}</h1>
+<h1 style="color:chocolate">{{wife}}</h1> <h1 style="color:khaki">{{lastName}}</h1> <h1 style="color:navy">{{surName}}</h1>
+
+<div>
+
+<h3>{{message}}</h3>  <span *ngIf="isJennifer==true"><img style="height:200px;width:200px" src="../assets/JL.jpg" alt="JLDarling" /></span>
+</div>
+
 
 <router-outlet></router-outlet>
