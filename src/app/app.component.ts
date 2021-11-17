@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testnetlifyOne';
+  wife:any='';
+  
+  mywife(){
+	  this.wife ='ARCHANA';
+  }
 }
