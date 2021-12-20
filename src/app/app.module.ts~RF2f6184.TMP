@@ -13,7 +13,8 @@ import { PageNotFoundComponent } from './pagenotfound.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { GoogleapiComponent } from './components/googleapi/googleapi.component';
-
+import { BarcodereaderComponent } from './components/barcodereader/barcodereader.component';
+import { NgxBarcodeModule } from 'ngx-barcode';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { GoogleapiComponent } from './components/googleapi/googleapi.component';
     ContactComponent,
     PageNotFoundComponent,
     GoogleapiComponent,
+    BarcodereaderComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { GoogleapiComponent } from './components/googleapi/googleapi.component';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
+    NgxBarcodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

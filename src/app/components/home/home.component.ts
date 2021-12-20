@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AsyncService } from '../../services/async.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  title = 'testnetlifyOne';
+  title = 'HomeTitle';
   wife: any = '';
   count: number = 0;
   message: string = '';
@@ -16,12 +17,43 @@ export class HomeComponent implements OnInit {
   surName: string = '';
 
   inputVal: boolean = false;
+  subDataOne: any;
+  behavsubDataOne: number = 2;
 
-  constructor() { }
+  loginText = '';
+  signUpText = '';
 
-  ngOnInit(): void { }
+  constructor(private asyncservice: AsyncService) {
+  }
+
+  ngOnInit(): void {
 
 
+  }
+
+  login() {}
+
+  signUp() {}
+
+  subsubscribe() {
+    this.asyncservice.passSubDataOne.subscribe((res) => {
+      if (res) {
+        localStorage.setItem('username', res);
+      }
+      this.subDataOne = res;
+      console.log(this.subDataOne);
+
+    }, (complete) => {
+      console.log('if completed');
+      console.log(complete);
+    });
+  }
+  behavsubsubscribe() {
+    this.asyncservice.passBehavDataOne.subscribe((res) => {
+
+      this.behavsubDataOne = res;
+    });
+  }
 
   mywife() {
     this.count += 1;

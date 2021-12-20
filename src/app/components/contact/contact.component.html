@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<section>
+  <p>Example @viewchild</p>
+  <input matInput #nameTest type="text" name="nameone" value="xzuy" />
+</section>
+
+<section>
+  <p>contact works!</p>
+
+  <button (click)="sendValToParent()">Click Me!</button>
+
+  <button (click)="findName()">FindName</button>
+
+  <p>
+    Name of my Father is :-
+    {{ myFatherOne }}
+
+  </p>
+</section>
+
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+
+  <tr *ngFor="let post of posts">
+    <td>{{ post.id }}</td>
+    <td>{{ post.title }}</td>
+    <td>{{ post.body }}</td>
+  </tr>
+</table>
+
+<div class="center">
+  <div class="pagination">
+    <a (click)="getPrev()">&laquo;</a>
+    <a *ngFor="let count of counts" (click)="fetchData(count)" [ngClass]="{'active': count == currentPage}" >{{ count }}</a>
+    <a (click)="getNext()">&raquo;</a>
+  </div>
+</div>
+

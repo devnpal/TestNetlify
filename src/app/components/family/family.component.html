@@ -1,1 +1,39 @@
-<p>family works!</p>
+<p>contact starts--------</p>
+<div>
+  <app-contact #child [myFather]="myDad" (myAction)="getAnotherDad($event)" >  
+
+  </app-contact>
+</div>
+<p>contact end----------</p>
+
+<div style="margin:2px">
+  <button (click)="passsubval()">
+    Passsubval
+  </button>
+</div>
+<div>
+  <button (click)="passbehavval()">
+    Passbehavsubval
+  </button>
+</div>
+
+
+<div>
+  <input type="text" name="name1" value="xxx" #refval />
+  <button (click)="seerefval(refval)">Seerefval</button>
+</div>
+
+<section>
+  <p>***********************************************************************</p>
+  <button (click)="getClickEvent($event)">Clickevnet</button>
+</section>
+
+<section>
+  <p>-------------------------------------------------------------------------</p>
+</section>
+
+<section>
+  <button (click)="getChildData()">GetChildData</button>
+  <p>child data.....</p>
+  {{ childData }}
+</section>

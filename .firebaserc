@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mytestonehallo": {
+      "hosting": {
+        "testnetlifyOne": [
+          "timroma"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mytestonehallo"
+  }
+}

@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
-const importsarray = [MatToolbarModule, MatButtonModule, MatIconModule]
+import { MatSelectModule } from '@angular/material/select';
+const importsarray = [MatToolbarModule, MatButtonModule, MatIconModule, MatSelectModule,]
 
 @NgModule({
   declarations: [],

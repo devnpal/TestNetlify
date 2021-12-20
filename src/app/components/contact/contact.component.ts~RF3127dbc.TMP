@@ -1,0 +1,35 @@
+import { EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
+})
+export class ContactComponent implements OnInit {
+  @Input()
+  myFather: string[];
+
+  myFatherOne: string;
+
+  childData = "this is child data";
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+    
+  }
+
+  findName() {
+    this.myFatherOne = this.myFather[0]; // child component takes data, process it and display the corresponding output.
+  }
+
+  @Output() myAction: EventEmitter<string> = new EventEmitter();
+  sendValToParent() {
+    //this.myFather.push('xxx');
+    this.myAction.emit('xxxx' + (Math.random()*100));
+  }
+
+}

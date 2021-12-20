@@ -1,3 +1,20 @@
+
+<h1>This is ng - template test!!!</h1>
+<hr />
+
+
+<ng-template>
+  <button class="tab-button"
+          (click)="login()">
+    {{loginText}}
+  </button>
+  <button class="tab-button"
+          (click)="signUp()">
+    {{signUpText}}
+  </button>
+</ng-template>
+
+<hr />
 <div style="display:flex; justify-content:space-around">
   <div style="margin-top:25px">
     <h1>Hey Guys ...!!!</h1>
@@ -17,3 +34,16 @@
     </div>
   </div>
 </div>
+
+
+<div>
+  <button (click)="subsubscribe()">SubjectSubscribe</button>
+
+  Subject data is {{ subDataOne }}
+</div>
+<div>
+  <button (click)="behavsubsubscribe()">BehaviorSubjectSubscribe</button>
+
+  Behaviour Subject data is {{behavsubDataOne}}
+</div>
+
